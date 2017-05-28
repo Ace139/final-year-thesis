@@ -1,0 +1,32 @@
+\chapter{OPTIMIZATION}
+\section{Introduction.}Definition: an act, process, or methodology of making something (as a design, system, or decision) as fully perfect, functional, or effective as possible. \\
+\textbf{In Business:}\\
+Finding an alternative with the most cost effective or highest achievable performance under the given constraints, by maximizing desired factors and minimizing undesired ones.Practice of optimization is restricted by the lack of full information, and the lack of time to evaluate what information is available.\\
+\textbf{In Science:}\\
+In mathematics, computer science and operations research, mathematical optimization (alternatively, optimization or mathematical programming) is the selection of a best element (with regard to some criteria) from some set of available alternatives.In the simplest case, an optimization problem consists of maximizing or minimizing a real function by systematically choosing input values from within an allowed set and computing the value of the function. The generalization of optimization theory and techniques to other formulations comprises a large area of applied mathematics.More generally, optimization includes finding "best available" values of some objective function given a defined domain (or a set of constraints), including a variety of different types of objective functions and different types of domains.\\
+\textbf{In Engineering:}\\
+Engineering Optimization is the subject which uses optimization techniques to achieve design goals in engineering. It is sometimes referred to as design optimization.\\
+Let us take an example.\\
+Suppose we want to buy a car. If we want the car with maximum luxury and minimum cost, this means we are considering both the factors at the time of purchase. So, this is optimization.If we are looking for the car only with maximum luxury, then this is 	maximization.And if, we are looking for a car with minimum cost, then this is minimization.\\
+\section{Types of optimization.}
+\subsection{Single-objective optimization.}The term single-objective corresponds to the fact that we have just one objective to optimize i.e. either maximize it or minimize it.\\Considering it the other way single-objective optimization can also we viewed as a combination of various objectives into an overall objective,where this overall objective is optimized. So, here the individual identity of the objectives is lost and there is no guarantee on the performance of the individual objectives as they are not considered separately. So, for these reasons we go for multi-objective optimization.\\For example,getting a job. Here,if we consider just that the job should offer maximum salary and no other constraints and objectives, then we go for maximization. Such cases are single-objective based.
+\subsection{Multi-objective optimization.}
+\subsubsection{4.2.2.1 Real-life situation.}In real-life we face situations where increasing value of one parameter decreases the value of the other parameter. So, actually there is a contradictory situation. For example, we want to buy a house. The house should be well-furnished with high-class facilities and at the same time the purchasing price should be less. So, here we find an inverse situation where the comparison is between luxury vs. cost, where we want increased luxury and decreased cost.\\
+But, in actual practice it is not possible. So, we have to make a compromise between luxury and cost so that to a certain limit both are optimal. We need to find the optimal luxury at the optimal price. Some objectives can be in competition, so a simultaneous minimization is not possible, but only a trade-off among them.\\
+So, such situations have multiple objectives associated like luxury and cost in the above example, so we study multiple-objective optimization.
+\subsubsection{4.2.2.2 Principles of MOO.}A multi-objective optimization problem involves a number of objective functions which are to be either minimized or maximized. As in the single-objective optimization problem, the multi-objective optimization problem usually has a number of constraints which any feasible solution (including the optimal solution) must satisfy. In the following, we state the multi-objective optimization problem (MOOP) in its general form:\\
+				Minimize/Maximize $f_{m}$(x),                    m=1, 2,…, M;\\
+				subject to    $g_{j}$ (x) ≥ 0,	                j=1, 2,...,J;\\
+							  $h_{k}$ (x) = 0.	                K=1, 2,..., K;\\
+\subsubsection{4.2.2.3 Example of MOO.}Minimize ZDT1 Function:  \\
+It is one of benchmark function which is commonly use to test the performance of a algorithm for MOO.
+The ZDT1 function has a convex Pareto-optimal front. The objective functions are: \\
+$f_{1}$(x) = x1\\
+%%$f_{2}$(x) = g(x) 1- \sqrt{$x_1$/g(x)\} \\
+Where g(x) is defined as: g(x )= 1+ 9($ $$\sum_{i=2}^{n}$$ $  $x_{i}$)/ (n-1)\\
+In this ZDT1 function, thirty design variables xi were chosen (n=30). Each design variable ranged in value from 0 to 1. The Pareto-optimal front appears when g = 1.0.\\
+\subsubsection{4.2.2.4 Dominated and Non-dominated set.  }
+\subsubsection{4.2.2.5 MOO approaches.}
+\subsubsection{4.2.2.6 Basic MOPSO algorithm.}
+\subsubsection{4.2.2.7 Applications of MOO.}
+

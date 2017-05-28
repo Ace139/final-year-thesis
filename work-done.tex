@@ -1,0 +1,69 @@
+\chapter{PARTICLE SWARM OPTIMIZATION (PSO)}
+
+\section{Introduction to PSO.}PSO is a robust stochastic optimization technique based on the movement and intelligence of swarms.PSO applies the concept of social interaction to problem solving.It was developed in 1995 by James Kennedy (social-psychologist) and Russell Eberhart (electrical engineer).It is developed from swarm intelligence and is based on the research of bird and fish flock movement behaviour.\\
+While searching for food, the birds are either scattered or go together before they locate the place where they can find the food.While the birds are searching for food from one place to another, there is always a bird that can smell the food very well, that is, the bird is perceptible of the place where the food can be found, having the better food resource information.Because they are transmitting the information, especially the good information at any time while searching the food from one place to another, conducted by the good information, the birds will eventually flock to the place where food can be found.\\
+As far as particle swam optimization algorithm is concerned, solution swarm is compared to the bird swarm, the birds moving from one place to another is equal to the development of the solution swarm, good information is equal to the most optimist solution, and the food resource is equal to the most optimist solution during the whole course. The most optimist solution can be worked out in particle swarm optimization algorithm by the cooperation of each individual.The particle without quality and volume serves as each individual, and the simple behavioural pattern is regulated for each particle to show the complexity of the whole particle swarm. This algorithm can be used to work out the complex optimist problems.\\
+\section{Why PSO?}
+1. SIMPLICITY- PSO is a very simple algorithm.Simple in the sense of implementation and calculations performed using it. Compared with the other developing or developed EAs, it occupies the bigger optimization ability and it can be completed easily.\\
+2. ROBUST- PSO is robust. As it can be applied to a huge range of diverse problems, PSO can be considered as one of the most robust algorithm.\\
+3. ADAPATABILITY- PSO is based on the intelligence and social behaviour of birds. So, it is easily adaptable and understandable by everyone.It can be applied into both scientific research and engineering use.\\
+4. PSO have no overlapping and mutation calculation. The search can be carried out by the speed of the particle. During the development of several generations, only the most optimist particle can transmit information onto the other particles, and the speed of the researching is very fast.\\
+5. EFFICIENCY- Derivative free with few algorithm parameters, so highly efficient global search algorithm.\\
+\section{Basic PSO.}It uses a number of agents (particles) that constitute a swarm moving around in the search space looking for the best solution. Each particle is treated as a point in a N-dimensional space which adjusts its “flying” according to its own flying experience as well as the flying experience of other particles.This means the particles change its condition (position) according to the following principles: (1) change the condition according to its most optimist position (2) change the condition according to the swarm’s most optimist position. The position of each particle in the swarm is affected both by the most optimist position during its movement(individual experience) and the position of the most optimist particle in its surrounding (neighbour experience)\\.Mathematically,Each particle keeps track of its coordinates in the solution space which are associated with the best solution (fitness) that has achieved so far by that particle. This value is called personal best,pbest.\\
+Another best value that is tracked by the PSO is the best value obtained so far by any particle in the neighborhood of that particle. This value is called gbest.\\
+The basic concept of PSO lies in accelerating each particle toward its pbest and the gbest locations, with a random weighted acceleration at each time step.\\
+1. Each particle tries to modify its position using the following information:\\
+i) the current positions\\
+ii)	the current velocities\\
+iii) the distance between the current position and pbest\\
+iv) the distance between the current position and the gbest. \\
+2. Each particle can be shown by its current speed and position, the most optimist position of each individual and the most optimist position of  the swarm according the following  equation :\\
+\textbf{Velocity equation:-}\\  
+\textbf{$V_i^{k+1}=wV_i^k+c_1 rand_1(..)x (pbest_i-s_i^k+c_2 rand_2(..)x(gbest-s_i^k)$}....(1) \\
+where, \\	
+$V_{i}^{k}$: velocity of  agent i at iteration k\\                                                                                                  w: weightage\\                                                                                                                                                                                             cj : weighting factor\\                                                                                                                        rand : uniformly distributed random number between 0 and 1\\                                                                             $s_{i}^{k}$: current position of agent i at iteration k\\                                                                                                   $pbest_{i}$: pbest of agent i\\                                                                                                                           gbest: gbest of the group.\\ \\
+Thefollowing weighting function is usually utilized in (1)
+w = wMax-[(wMax-wMin) x iter]/maxIter ....(2)\\
+where,\\
+wMax= initial weight\\
+wMin = final weight\\
+maxIter = maximum iteration number\\
+iter = current iteration number\\
+Larger w ----------- greater global search ability\\
+Smaller w ----------- greater local search ability\\ 
+\textbf{Position equation:- }    \\
+$S_{i}^{k+1} = S_{i}^{k} + V_{i}^{k+1}$ .....(3)\\
+where,\\
+$S_{i}^{k+1}$ is the next position of agent at k+1 iteration.                                                                           
+\section{Basic PSO algorithm.}Initialization:
+All required parameters like w, c1, c2, maxIter, etc. for each particle initialize particle’s position, velocity, personal best (pBest) and gBest.\\
+% End initialization
+Do\\
+For each particle\\ 
+Calculate fitness value\\
+If the fitness value is better than its personal best\\
+set current value as the new pBest\\
+End\\
+Choose the particle with the best fitness value of all as gBest for each particle\\ 
+Calculate particle velocity according equation (1)\\
+Update particle position according equation (3)\\
+End\\ 
+While ( maximum iterations or minimum error criteria is not attained.)\\
+\section{Flowchart depicting general PSO.}
+\includegraphics[width=1.4\textwidth]{./psalgo}\\[1cm]
+\section{Advantages and Disadvantages of PSO.}\textbf{ADVANTAGES OF PSO}\\
+(1)PSO is based on the intelligence. It can be applied into both scientific research and engineering use.\\
+(2)PSO have no overlapping and mutation calculation. The search can be carried out by the speed of the particle.During the development of several generations, only the most optimist particle can transmit information onto the other particles,and the speed of the researching is very fast.\\
+(3)The calculation in PSO is very simple. Compared with the other developing calculations, it occupies the bigger optimization ability and it can be completed easily.\\
+(4) PSO adopts the real number code, and it is decided directly by the solution.\\
+\textbf{DISADVANTAGES OF PSO}\\
+(1)The method easily suffers from the partial optimism, which causes the less exact at the regulation of its speed and the direction.\\
+(2)The method cannot work out the problems of non-coordinate system, such as the solution to the energy field and the moving rules of the particles in the energy field.\\
+\section{Applications of PSO.}Kennedy and Eberhart established the first practical application of Particle Swarm Optimization in 1995. It was in the field of neural network training and was reported together with the algorithm itself. PSO have been successfully used across a wide range of applications, for instance,\\
+\textbf{ANTENNAS DESIGN:}The optimal control and design of phased arrays, broadband antenna design and modeling, reflector antennas, optimization of a reflect array antenna, far-field radiation pattern reconstruction, antenna modeling, design of planar antennas, conformal antenna array design, design of patch antennas, design of a periodic antenna arrays, near-field antenna measurements, design of implantable antennas. \\
+\textbf{SIGNAL PROCESSING:}Pattern recognition of flatness signal, design of IIR filters, 2D IIR filters, speech coding, analogue filter tuning, particle filter optimization, nonlinear adaptive filters, Costas arrays, wavelets, blind detection, blind source separation, localization of acoustic sources, distributed odour source localization, and so on.\\
+\textbf{BIOMEDICAL:}Human tremor analysis for the diagnosis of Parkinson’s disease, inference of gene regulatory networks, human movement biomechanics optimization, RNA secondary structure determination, cancer classification, and survival prediction, DNA motif detection, biomarker selection, protein structure prediction and docking, drug design, radiotherapy planning, analysis of brain magneto encephalography data, electroencephalogram analysis, biometrics and so on.\\
+\textbf{ROBOTICS:} Control of robotic manipulators and arms, motion planning and control, odour source localization, soccer playing, robot running, robot vision, collective robotic search, transport robots, unsupervised robotic learning, path planning, obstacle avoidance, swarm robotics, unmanned vehicle navigation, environment mapping, voice control of robots, and so forth.\\
+\textbf{PREDICTION AND FORECASTING:} Water quality prediction and classification, prediction of chaotic systems, stream flow forecast, ecological models, meteorological predictions, prediction of the flow stress in steel, time series prediction, electric load forecasting, battery pack state of charge estimation, predictions of elephant migrations, prediction of surface roughness in end milling, urban traffic flow forecasting, and so on.\\
+
+
